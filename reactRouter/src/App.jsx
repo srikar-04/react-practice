@@ -1,16 +1,12 @@
 import { useState } from 'react'
-import Test from './components/Test'
-import CurrenyHook from './hooks/CurrenyHook'
+import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const data = CurrenyHook('inr')
-  console.log(data);
-  
 
   return (
     <>
-
+      <div className=''>hello world</div>
     </>
   )
 }
