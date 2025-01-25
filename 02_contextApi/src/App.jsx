@@ -15,6 +15,9 @@ function App() {
       <div className='text-red-500'>
         hello world again
       </div>
+      <div>
+        hello world for the third time
+      </div>
     </>
   )
 }
