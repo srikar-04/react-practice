@@ -27,6 +27,20 @@ function App() {
     setTodos(prevTodos => prevTodos.map(prevTodo => prevTodo.id === id ? {...prevTodo, completed: !prevTodo.completed} : prevTodo ))
   }
 
+  const useEffect = (() => {
+    const todos = JSON.parse(localStorage.getItem("todos"))
+
+    if(todos && todos.length > 0) {
+      setTodos(todos)
+    }
+
+  }, [])
+
+  useEffect( () => {
+    localStorage.getItem("todos", JSON.stringify(todos))
+  }, [todos])
+  
+
   return (
     <>
       <TodoProvider value={{todos, addTodo, updateTodo, deleteTodo, toggleComplete}}>
